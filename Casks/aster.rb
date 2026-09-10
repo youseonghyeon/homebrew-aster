@@ -8,7 +8,7 @@ cask "aster" do
   homepage "https://github.com/youseonghyeon/aster"
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: :high_sierra
 
   app "Aster.app"
 end
