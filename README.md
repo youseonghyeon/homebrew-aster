@@ -19,7 +19,14 @@ brew tap youseonghyeon/aster
 brew install --cask youseonghyeon/aster/aster
 ```
 
-Homebrew가 Tap 신뢰 확인을 요청하면 저장소 주소가 `https://github.com/youseonghyeon/homebrew-aster`인지 확인합니다.
+최신 Homebrew에서 `untrusted tap` 오류가 나타나면 저장소 주소가 `https://github.com/youseonghyeon/homebrew-aster`인지 확인한 뒤 이 Cask만 신뢰 등록하고 다시 실행합니다.
+
+```sh
+brew trust --cask youseonghyeon/aster/aster
+brew install --cask youseonghyeon/aster/aster
+```
+
+`brew trust`가 없는 이전 Homebrew에서는 이 단계가 필요하지 않습니다. [Homebrew의 Tap 신뢰 안내](https://docs.brew.sh/Tap-Trust)를 참고하세요.
 
 이미 수동 설치한 Aster가 있다면 그대로 앱 내 업데이트를 사용해도 됩니다. 위 명령은 기존 앱을 강제로 덮어쓰는 명령이 아니며, 기존 `/Applications/Aster.app` 때문에 설치가 중단될 수 있습니다.
 
@@ -50,6 +57,6 @@ brew fetch --cask youseonghyeon/aster/aster
 
 `brew fetch`는 다운로드와 체크섬 검증만 수행하며 앱을 설치하지 않습니다. Tap을 별도로 clone해 수정했다면 `brew audit`와 `brew fetch`는 Homebrew에 등록된 Tap 사본을 읽는다는 점에 주의합니다. 게시 후 `brew update`로 갱신하거나 등록된 Tap에서 작업합니다.
 
-Cask의 최소 macOS 버전은 배포 앱의 `LSMinimumSystemVersion`과 일치시킵니다. 이는 해당 OS에서의 실기기 검증을 의미하지 않으며 Homebrew 자체의 지원 OS 조건도 별도로 적용됩니다.
+Cask는 macOS 전용입니다. 1.9.1 앱의 `LSMinimumSystemVersion`은 10.13이지만 최신 Homebrew는 이 오래된 OS 의존성 선언을 허용하지 않아 별도로 선언하지 않습니다. Homebrew 자체의 지원 OS 조건이 적용되며, 앱의 최소 버전 표기는 해당 OS에서의 실기기 검증을 의미하지 않습니다.
 
 향후 Homebrew 공식 Cask 등록은 별도 심사를 거쳐 진행합니다.
