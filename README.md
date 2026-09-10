@@ -2,7 +2,7 @@
 
 Install [Aster](https://github.com/youseonghyeon/aster), a Markdown desktop reader, with Homebrew.
 
-This tap is maintained by Aster's developer and is separate from the official Homebrew Cask repository. It distributes the stable macOS app as a Universal DMG for Apple Silicon and Intel, downloaded from Aster's GitHub Releases and verified with SHA-256. Dev and Preview builds are not included.
+This tap is maintained by Aster's developer. It distributes the stable macOS app as a Universal DMG for Apple Silicon and Intel, downloaded from Aster's GitHub Releases and verified with SHA-256. Dev and Preview builds are not included.
 
 ## Install
 
@@ -58,8 +58,6 @@ brew fetch --cask youseonghyeon/aster/aster
 `brew fetch` downloads and verifies the archive without installing the app. If you edit a separate clone, remember that `brew audit` and `brew fetch` read Homebrew's registered copy of the tap. Work in that copy, or refresh it with `brew update` after publishing and verify the published version.
 
 The cask is macOS-only. Aster 1.9.1 declares `LSMinimumSystemVersion` as 10.13, but current Homebrew no longer accepts that old macOS dependency declaration, so the cask does not specify it. Homebrew's own OS support requirements still apply. The app's declared minimum version does not imply testing on that OS.
-
-Submission to the official Homebrew Cask repository will be considered separately and is subject to review.
 
 ## Contributing
 
