@@ -1,6 +1,6 @@
 cask "aster" do
-  version "1.9.1"
-  sha256 "a9f811e7b6ed7a770230dd9f2870f17212673da45c5cb853369aa2d8ccdb7cfb"
+  version "1.9.2"
+  sha256 "1e02254f4182c861d07401da463014d652c953a0a1e92e03a1289c852c7705be"
 
   url "https://github.com/youseonghyeon/aster/releases/download/v#{version}/Aster_#{version}_universal.dmg"
   name "Aster"
